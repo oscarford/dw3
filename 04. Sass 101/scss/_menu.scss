@@ -1,25 +1,14 @@
-/*header*/
-header {
-    background: #f0f3f1;
-    text-align: center;
-    font-family: 'Hind', sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 4em;
-}
-header > * {
-    display: flex;
-    align-items: center;
-}
 header a {
     text-decoration: none;
     color: #334252;
 }
+
 header > a {
     font-size: 34px;
     font-weight: 700;
 }
+
+
 header a span {
     width: 34px;
     height: 34px;
@@ -30,10 +19,13 @@ header a span {
     border-radius: 6px;
     text-align: center;
 }
+
+
 header li {
     width: 60px;
     list-style: none;
 }
+
 /*efecto debajo de elemento menú*/
 ul li:after {
     content: '';
