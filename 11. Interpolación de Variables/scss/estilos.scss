@@ -1,0 +1,56 @@
+/* Regla 1 */
+$lados: ('right', 'left');
+
+@each $lado in $lados {
+    .no-margin-#{$lado} {
+        margin-#{$lado}: 0;
+    }
+}
+
+/* Regla 2 */
+$columnas: (1: "col-1",
+    2: "col-2",
+    3: "col-3"
+);
+
+@each $key,
+$value in $columnas {
+    .#{$value} {
+        display: grid;
+        grid-template-columns:repeat(#{$key}, 1fr);
+    }
+}
+
+/* Regla 3 */
+$btn: ("primary": "rgba(255,200,0,1)",
+    "secondary": "rgba(0,150,0,1)"
+);
+
+@each $key,
+$value in $btn {
+    .btn-#{$key} {
+        color:#{$value};
+        background: transparent;
+        border: 1px solid #{$value};
+        transition: background 0.2s;
+    }
+
+    .btn-#{$key}:hover {
+        color: white;
+        background:#{$value};
+    }
+}
+
+/* Regla 4 */
+
+$directions: ("top", "bottom", "left", "right");
+
+@each $value in $directions {
+
+    @for $i from 0 through 2 {
+
+        .m-#{$value}-#{$i} {
+            margin-#{$value}: #{$i}rem;
+        }
+    }
+}
