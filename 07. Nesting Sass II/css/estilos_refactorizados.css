@@ -1,0 +1,39 @@
+ul li {
+  display: inline-block;
+}
+ul li a {
+  text-decoration: none;
+  padding: 10px;
+}
+ul li a:hover {
+  color: red;
+}
+ul li:hover::before {
+  width: 100%;
+}
+ul li:hover::after {
+  width: 100%;
+}
+ul li::before {
+  content: "";
+  display: block;
+  height: 2px;
+  background: red;
+  width: 0;
+  transition: width 0.5s;
+  margin: 5px auto;
+  margin: 5px auto 5px 0;
+  transition: width 0.5s 0.5s;
+}
+ul li::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: red;
+  width: 0;
+  transition: width 0.5s;
+  margin: 5px auto;
+  margin: 5px 0 5px auto;
+}
+
+/*# sourceMappingURL=estilos_refactorizados.css.map */

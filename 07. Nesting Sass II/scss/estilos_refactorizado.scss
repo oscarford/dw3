@@ -1,0 +1,45 @@
+@mixin seudo-elementos_li {
+    content: "";
+    display: block;
+    height: 2px;
+    background: red;
+    width: 0;
+    transition: width 0.5s;
+    margin: 5px auto;
+}
+
+ul {
+    li {
+        display: inline-block;
+
+        a {
+            text-decoration: none;
+            padding: 10px;
+
+            &:hover {
+                color: red;
+            }
+        }
+
+        &:hover {
+            &::before {
+                width: 100%;
+            }
+
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &::before {
+            @include seudo-elementos_li();
+            margin: 5px auto 5px 0;
+            transition: width 0.5s 0.5s;
+        }
+
+        &::after {
+            @include seudo-elementos_li();
+            margin: 5px 0 5px auto
+        }
+    }
+}
