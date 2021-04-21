@@ -1,0 +1,43 @@
+header {
+
+    a {
+        text-decoration: none;
+        color: $color-section;
+    }
+
+    >a {
+        font-size: 34px;
+        font-weight: $font-w4;
+    }
+
+    span {
+        width: 34px;
+        height: 34px;
+        display: inline-block;
+        background: $color-span-a;
+        line-height: 34px;
+        color: $color-fondo-2;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    li {
+        width: 60px;
+        list-style: none;
+    }
+}
+
+/*efecto debajo de elemento menú*/
+ul li:after {
+    content: '';
+    height: 2px;
+    background-color: $color-span-a;
+    display: block;
+    width: 0px;
+    margin: 5px auto;
+    transition: width 0.5s;
+}
+
+li:hover:after {
+    width: 100%;
+}
